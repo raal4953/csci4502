@@ -1,0 +1,7 @@
+#+TITLE: Group Project
+#+AUTHOR: Our name
+#+OPTIONS: num:nil toc:nil H:1 \n:t
+
+* Data Set
+https://www.kaggle.com/kaggle/college-scorecard/data
+
