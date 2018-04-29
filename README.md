@@ -9,7 +9,7 @@
 
 # College Critics
 
-**Team members:** Kyle Hartland Brown, Victoria Valesquez, and Rami AlQunaibit
+**Team members:** Kyle Hartland Brown, Victoria Velasquez, and Rami AlQunaibit
 
 
 <a id="org9cdab27"></a>
