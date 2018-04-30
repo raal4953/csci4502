@@ -1,25 +1,25 @@
-- [College Critics](#org6605449)
-  - [About The Project:](#orgb8f0b10)
-  - [Questions:](#orge1f9fec)
-  - [Answers:](#orgfda69b4)
-  - [Application:](#orgc954bb1)
+- [College Critics](#orga18b08f)
+  - [About The Project:](#org32789cf)
+  - [Questions:](#org1b7597f)
+  - [Answers:](#org62ee377)
+  - [Application:](#org7a9e7cd)
 
 
-<a id="org6605449"></a>
+<a id="orga18b08f"></a>
 
 # College Critics
 
-**Team members:** Kyle Hartland Brown, Victoria Valasquez, and Rami AlQunaibit
+**Team members:** Kyle Hartland Brown, Victoria Velasquez, and Rami AlQunaibit
 
 
-<a id="orgb8f0b10"></a>
+<a id="org32789cf"></a>
 
 ## About The Project:
 
 The goal of our project is to analyze a series of documents created by the Department of Education called ”College Scorecards”. These consist of various categories concerning the institutions of the United States, including but not limited to: Graduating Debt, Graduating Income, Transfer status during schooling, and acceptance rate(among many others). Our hope is to analyze this data and discover trends concerning average debt of different institutions and other categories listed. We hope to find answers to various questions.
 
 
-<a id="orge1f9fec"></a>
+<a id="org1b7597f"></a>
 
 ## Questions:
 
@@ -29,14 +29,14 @@ The goal of our project is to analyze a series of documents created by the Depar
 -   Do institutions with higher acceptance rates tend to have higher levels of debt on graduation?
 
 
-<a id="orgfda69b4"></a>
+<a id="org62ee377"></a>
 
 ## Answers:
 
 ++
 
 
-<a id="orgc954bb1"></a>
+<a id="org7a9e7cd"></a>
 
 ## Application:
 
