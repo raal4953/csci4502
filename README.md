@@ -1,39 +1,42 @@
-- [College Critics](#orge4cb1ef)
-  - [About The Project:](#org9cdab27)
-  - [Questions:](#org58340be)
-  - [Answers:](#org678706b)
-  - [Application:](#orgc971b44)
+- [College Critics](#org5a526d1)
+  - [About The Project:](#org716a75b)
+  - [Questions:](#org45d3c70)
+  - [Answers:](#orgb46f4e0)
+  - [Application:](#org3e1329a)
 
 
-<a id="orge4cb1ef"></a>
+<a id="org5a526d1"></a>
 
 # College Critics
 
 **Team members:** Kyle Hartland Brown, Victoria Velasquez, and Rami AlQunaibit
 
 
-<a id="org9cdab27"></a>
+<a id="org716a75b"></a>
 
 ## About The Project:
 
 The goal of our project is to analyze a series of documents created by the Department of Education called ”College Scorecards”. These consist of various categories concerning the institutions of the United States, including but not limited to: Graduating Debt, Graduating Income, Transfer status during schooling, and acceptance rate(among many others). Our hope is to analyze this data and discover trends concerning average debt of different institutions and other categories listed. We hope to find answers to various questions.
 
 
-<a id="org58340be"></a>
+<a id="org45d3c70"></a>
 
 ## Questions:
 
-"Do institutions with graduating debt tend to have higher graduating income?", "Do institutions with higher faculty salary tend to have higher levels of completion?", "Do special mission or religious affiliation institutions' graduates tend to have lower income?" and "Do institutions with higher acceptance rates tend to have higher levels of debt on graduation?".
+-   Do institutions with graduating debt tend to have higher graduating income?
+-   Do institutions with higher faculty salary tend to have higher levels of completion?
+-   Do special mission or religious affiliation institutions' graduates tend to have lower income?
+-   Do institutions with higher acceptance rates tend to have higher levels of debt on graduation?
 
 
-<a id="org678706b"></a>
+<a id="orgb46f4e0"></a>
 
 ## Answers:
 
 ++
 
 
-<a id="orgc971b44"></a>
+<a id="org3e1329a"></a>
 
 ## Application:
 
