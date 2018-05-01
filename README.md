@@ -53,4 +53,4 @@ This project can be applied to various applications regarding college degree exp
 
 2.  Link to your final project paper
 
-    ++
+    https://github.com/raal4953/csci4502/blob/master/26_CollegeCritics_Part4.pdf
