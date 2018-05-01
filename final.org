@@ -111,3 +111,11 @@ Note: The dataset is very huge for personal computer to handle with ease. With 1
 [[./variables/images/image6.png]]
 * Applications
 # How can the knowledge gained be applied?
+
+
+** notes :: classification for different kind of debts 
+*** earnings high med and low 
+*** 50< low  and above is high classification
+*** completion rate under 50% completion and high above
+no need for decision tree because the columns multiple type of attributes. Cleaning makes loss, you cannot transfer that to integers always.  
+- consistency in the data
