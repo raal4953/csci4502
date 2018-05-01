@@ -48,7 +48,7 @@ This project can be applied to various applications regarding college degree exp
 
 1.  Link to the video demonstration
 
-    https://youtu.be/6emJp_RWEVw
+    26_CollegeCritics_Part5: https://youtu.be/6emJp_RWEVw
     (Video is too large to add to GitHub, this link will take you to the youtube viedo)
 
 2.  Link to your final project paper
