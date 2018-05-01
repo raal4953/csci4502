@@ -120,7 +120,7 @@ This project can be applied to various applications regarding college degree exp
 
 * Appendix
 #+ATTR_LATEX: :float multicolumn :align |c|c|c|
-+#+Caption: Attributes
+#+CAPTION: Attributes
 |---------------------+-----------------------------------------------+---------|
 | Column              | Value                                         | Type    |
 |---------------------+-----------------------------------------------+---------|
