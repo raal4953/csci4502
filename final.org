@@ -1,9 +1,21 @@
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \PassOptionsToPackage{hyperref,x11names}{xcolor}
+#+LATEX_HEADER: \definecolor{electricblue}{HTML}{05ADF3}
+#+LATEX_HEADER: \usepackage{tocloft}
+#+LATEX_HEADER: \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+#+LATEX_HEADER: \usepackage[breaklinks=true,linktocpage,xetex]{hyperref} 
+#+LATEX_HEADER: \hypersetup{colorlinks, citecolor=electricblue,filecolor=electricblue,linkcolor=electricblue,urlcolor=electricblue}
+
+#+LATEX_HEADER: \usepackage{tabularx}
+
 #+LaTeX_CLASS_OPTIONS: [twocolumn]
+#+LaTex_HEADER: \setlength{\columnsep}{2cm}
+
 #+TITLE:College Scorecard Analysis of the Institutions of America
 #+AUTHOR:Kyle Hartland Brown, Victoria Velasquez, and Rami AlQunaibit
 #+EMAIL:raal4953@colorado.edu
 #+SUBTITLE: CSCI4502 project
-#+OPTIONS: num:nil toc:nil H:2
+#+OPTIONS: num:nil toc:nil H:2 ^:nil
 
 # Borrow less than your projected annual salary
 * Abstract
@@ -53,22 +65,7 @@ We also fully intend to start exploring other data sets as we answer our questio
 example, it may be interesting to search for data concering the average income of residents in cities surrounding
 colleges to see if there is any affect on the loan rates and tuition costs due to poverty or wealth of certain areas.
 
-The attributes that we used: 
-- GRAD_DEBT_MDN
-- count_wne_inc3_p6
-- ADM_RATE
-- PREDDEG
-- DEBT_MDN
-- AVGFACSAL
-- C150_4
-- LO_INC_DEBT_MDN
-- MD_INC_DEBT_MDN
-- HI_INC_DEBT_MDN
-- RELAFFIL
-- COSTT4_A
-- mn_earn_wne_inc1_p6
-- CONTROL
-- mn_earn_wne_inc3_p6
+The attributes that we mostly used from the 1729 columns are in Table 1.
 * Evaluation Methods
 To evaluate our data the larges challenge will be actually sorting through it to find the percentages that could be correlated. Otherwise the entire data set is composed of percentages which we assume to be taken out of the total population of students for each university. So at that point we can reference how other papers evaluated things like the predicted income or debt, but most of our work in evaluating the data will be in checking the Confidence and Support of the relationships we hope to draw. At that point we will determine a minimum support that would make the data relevant and draw conclusions based on what these metrics tell us.
 * Tools
@@ -82,40 +79,112 @@ Our tools do not exceed the functions that:
 # Data Warehouse/cube/etc.
 # Classification/Clustering/etc.
 Note: The dataset is very huge for personal computer to handle with ease. With 1729 attributes and 18 files(millions of data points), a lot of work needed. 
-** Cleaning
+** 1. Cleaning
 - Renaming all files year for easier integeration and sorting. 
 - Sort all files by names.
 - Defining poorly organized variables
 - Cleaning all variables for privacy supressed schools and nulls.
-** Clustering
-
+** 2. Classification
++ Earnings: 
+  - High-income: $75,001+
+  - Med-income: $30,001-$75,000
+  - Low-income: $0-$30,000
++ Completion rate
+  - High: > 50%
+  - Low: < 50%
+** 3. Limitations
+The decision tree was limited by the inconsistency in the data types. Moreover, Pandas functions were not producing any significant or desired effect with the columns which have multiple data types. Hence, the decesion tree was useless and needed more development to a high degree of complexity, or some enterprise level libraries.
 * Key Results
 # What did you discover/learn?
-#+CAPTION: first image
-#+NAME:   fig:SED-1
-[[./variables/images/image1.png]]
-#+CAPTION: second image
-#+NAME:   fig:SED-1
-[[./variables/images/image2.png]]
-#+CAPTION: first image
-#+NAME:   fig:SED-1
-[[./variables/images/image3.png]]
-#+CAPTION: first image
-#+NAME:   fig:SED-1
-[[./variables/images/image4.png]]
-#+CAPTION: first image
-#+NAME:   fig:SED-1
-[[./variables/images/image5.png]]
-#+CAPTION: first image
-#+NAME:   fig:SED-1
-[[./variables/images/image6.png]]
+- Support and Confidence: 
+  + 68.77% of schools released data about debt, which means that almost third of the data is missing. This makes our task harder to know more about debt. And 67.25% of the schools (that reports) have students with average debt < $15,000 (support: 0.6725). Of those we have 8% of schools have students with debt < $15,000 and with earnings greater than $30,000 (confidence: (Debt < 15,000)  => (earnings > 30,000) = 0.08)
+  + Also only 28% of schools released data about completion rate (support: 0.2846). Of those 54% of schools have a completion rate of > 50% (Support: 0.54). And 19% of schools with a completion rate > 50% have earning > $30,000 (Confidence: Comp > .50 to earnings > 30,000 = 0.19)
+
+- In Figure 1, the top graph represents high-income, middle graph represents med-income, and bottom graph represents low-income. The interesting trend is that high debt have low level income. On the other hand, the 0 debt have higher income range. This trend is seen in all three income levels. 
+
+- In Figure 2, the top graph shows a correlation between the faculaty salary and the students' completion rate. In fact, above 15,000 the completion rate almost goes around 100%. In the middle graph, there is no indication of any realtion between the acceptance rate and the debt. In the bottom graph, there seems to be kind of trend between completion rate and debt. However there is no enough evidence to support that.
+
+- Note: Salary is the faculaty monthly income, and Earnings are the annual graduate income in the graph. 
+- We used Figure 3 and Figure 4 to compare University of Colorado at Boulder with the Nation's mean. It is clear that CU Boulder is above average in all aspects. CU Boulder has higher debt than the national as well as higher earnings. Additionally, the faculaty salary has always been hire than the Nation's mean. In CU Boulder the faculaty salary in 1997 is higher than the Nation's highest point ever. Moreover, CU Boulder always had a higher completifon rate than Nation's best completion rate. 
+
 * Applications
 # How can the knowledge gained be applied?
 
+This project can be applied to various applications regarding college degree expenses. It can be seen as a good starting point for any person thinking about the debt that comes with the degree. For instance, the project can be expanded into a more accurate debt calculator for students to use. Moreover, the project also looked at the college degree as an investment. Thus, applications concerned with the benefits of degrees can use the project as well. For example, the ease of understanding the amount of debt and profit is very important to any person considering a college degree.
 
-** notes :: classification for different kind of debts 
-*** earnings high med and low 
-*** 50< low  and above is high classification
-*** completion rate under 50% completion and high above
-no need for decision tree because the columns multiple type of attributes. Cleaning makes loss, you cannot transfer that to integers always.  
-- consistency in the data
+* Appendix A
+#+ATTR_LATEX: :float multicolumn :align |c|c|c|
+|---------------------+-----------------------------------------------+---------|
+| Column              | Value                                         | Type    |
+|---------------------+-----------------------------------------------+---------|
+| GRAD_DEBT_MDN       | The median debt for students who have         | float   |
+|                     | completed.                                    |         |
+|---------------------+-----------------------------------------------+---------|
+| count_wne_inc3_p6   | Number of students working and not enrolled 6 | integer |
+|                     | years after entry in the highest income       |         |
+|                     | tercile.                                      |         |
+|---------------------+-----------------------------------------------+---------|
+| ADM_RATE            | Admission rate.                               | float   |
+|---------------------+-----------------------------------------------+---------|
+| PREDDEG             | Predominant degree awarded                    | integer |
+|                     | 0 = Not classified                            |         |
+|                     | 1 = Predominantly certificate-degree granting |         |
+|                     | 2 = Predominantly associate's-degree granting |         |
+|                     | 3 = Predominantly bachelor's-degree granting  |         |
+|                     | 4 = Entirely graduate-degree granting         |         |
+|---------------------+-----------------------------------------------+---------|
+| DEBT_MDN            | The original amount of the loan principal     | float   |
+|                     | upon entering repayment.                      |         |
+|---------------------+-----------------------------------------------+---------|
+| AVGFACSAL           | Average faculty salary.                       | integer |
+|---------------------+-----------------------------------------------+---------|
+| C150_4              | Completion rate for first-time, full-time     | float   |
+|                     | students at four-year institutions.           |         |
+|---------------------+-----------------------------------------------+---------|
+| LO_INC_DEBT_MDN     | The median debt for students with family      | float   |
+|                     | income between $0-$30,000.                    |         |
+|---------------------+-----------------------------------------------+---------|
+| MD_INC_DEBT_MDN     | The median debt for students with family      | float   |
+|                     | income between $30,001-$75,000                |         |
+|---------------------+-----------------------------------------------+---------|
+| HI_INC_DEBT_MDN     | The median debt for students with family      | float   |
+|                     | income $75,001+                               |         |
+|---------------------+-----------------------------------------------+---------|
+| RELAFFIL            | Religous affiliation of the institution.      | integer |
+|---------------------+-----------------------------------------------+---------|
+| COSTT4_A            | Average cost of attendance (academic year     | integer |
+|                     | institutions).                                |         |
+|---------------------+-----------------------------------------------+---------|
+| mn_earn_wne_inc1_p6 | Mean earnings of students working and not     | float   |
+|                     | enrolled 6 years after entry in the lowest    |         |
+|                     | income tercile.                               |         |
+|---------------------+-----------------------------------------------+---------|
+| CONTROL             | Control of institution                        | integer |
+|                     | 1 Public                                      |         |
+|                     | 2 Private nonprofit                           |         |
+|                     | 3 Private for-profit                          |         |
+|---------------------+-----------------------------------------------+---------|
+| mn_earn_wne_inc3_p6 | Mean earnings of students working and not     | float   |
+|                     | enrolled 6 years after entry in the highest   |         |
+|                     | income tercile.                               |         |
+|---------------------+-----------------------------------------------+---------|
+
+#+attr_latex: :float multicolumn :width 400px
+#+CAPTION: Debt relating to income
+#+NAME:   fig:SED-1
+[[../final/variables/images/image1.png]]
+
+#+attr_latex: :float multicolumn :width 400px
+#+CAPTION: Acceptance, Completion, Debt
+#+NAME:   fig:SED-1
+[[../final/variables/images/image3.png]]
+
+#+attr_latex: :float multicolumn :width 400px
+#+CAPTION: National Data
+#+NAME:   fig:SED-1
+[[../final/variables/images/image4.png]]
+
+#+attr_latex: :float multicolumn :width 400px
+#+CAPTION: CU Boulder Data
+#+NAME:   fig:SED-1
+[[../final/variables/images/image2.png]]
